@@ -1,0 +1,9 @@
+@import "../../styles/variables";
+
+.navigation {
+    &__list {
+        display: flex;
+        list-style: none;
+        column-gap: 4rem;
+    }
+}
