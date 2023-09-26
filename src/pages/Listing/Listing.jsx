@@ -4,7 +4,9 @@ function Listing() {
     const { listingId } = useParams()
 
     return (
-        <h1>Listing n°{listingId}</h1>
+        <main>
+            <h1>Listing n°{listingId}</h1>
+        </main>
     )
 }
 
