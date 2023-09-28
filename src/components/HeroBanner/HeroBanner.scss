@@ -1,1 +1,49 @@
 @import "../../styles/variables";
+@import "../../styles/media-queries";
+
+.hero-banner {
+    width: 100%;
+    height: 7rem;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2rem;
+    @include breakpoint-tablet {
+        height: 14rem;
+        border-radius: 25px;
+        justify-content: center;
+        text-align: center;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+        }
+    &__title {
+        font-size: 1.5rem;
+        font-family: $font-family;
+        font-weight: 500;
+        color: $light-color;
+        position: relative;
+        padding-left: 1rem;
+        z-index: 2;
+        @include breakpoint-tablet {
+            font-size: 3rem;
+        }
+    }
+    &__cover {
+        position: absolute;
+        width: 100%;
+        top: -50%;
+        left: 0;
+        z-index: 0;
+    }
+}

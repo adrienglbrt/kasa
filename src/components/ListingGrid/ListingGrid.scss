@@ -1,0 +1,20 @@
+@import "../../styles/variables";
+@import "../../styles/media-queries";
+
+
+.listing-grid {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    @include breakpoint-tablet {
+        padding: 2rem;
+        border-radius: 25px;
+        background-color: $secondary-color;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+    @include breakpoint-desktop {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

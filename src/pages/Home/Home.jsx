@@ -1,24 +1,27 @@
-import HeroBanner from "../../components/HeroBanner/HeroBanner"
-import ListingThumb from "../../components/ListingThumb/ListingThumb"
+import HeroBanner from "../../components/HeroBanner"
+import ListingGrid from "../../components/ListingGrid"
+import jsonData from "../../data/logements.json"
+import homeHeroImg from "../../assets/home-hero-img.jpg"
+import "./Home.scss"
 
 function Home() {
+    const heroData = {
+        title: "Chez vous, partout et ailleurs",
+        cover: homeHeroImg,
+    }
+
     return (
         <main>
-            <section>
-                <HeroBanner />
+            <section className="section">
+                <HeroBanner data={heroData} />
             </section>
-            <section>
-                <div>
-                    <ListingThumb />
-                    <ListingThumb />
-                    <ListingThumb />
-                    <ListingThumb />
-                    <ListingThumb />
-                    <ListingThumb />
-                </div>
+            <section className="section">
+                <ListingGrid data={jsonData} />
             </section>
         </main>
     )
 }
 
 export default Home
+
+
