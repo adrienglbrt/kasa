@@ -1,7 +1,18 @@
+import HeroBanner from "../../components/HeroBanner"
+import aboutHeroImg from "../../assets/about-hero-img.jpg"
+
+
 function About() {
+    const heroData = {
+        title: "",
+        cover: aboutHeroImg,
+    }
+
     return (
         <main>
-            <h1>About</h1>
+            <section className="section">
+                <HeroBanner data={heroData} />
+            </section>
         </main>
     )
 }
