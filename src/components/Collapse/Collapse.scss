@@ -6,6 +6,9 @@
     background-color: $secondary-color;
     transition: max-height 0.3s;
     margin-bottom: 1rem;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
     &--expanded {
         .collapse__content {
             max-height: fit-content;
