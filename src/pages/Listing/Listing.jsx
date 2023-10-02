@@ -1,8 +1,8 @@
 import { useParams } from 'react-router-dom'
 import jsonData from "../../data/logements.json"
 import Slideshow from '../../components/Slideshow'
-import Host from '../../components/Host/Host'
-import ListingRating from '../../components/ListingRating'
+import ListingMain from '../../components/ListingMain'
+import ListingDetails from '../../components/ListingDetails'
 
 function Listing() {
     const { listingId } = useParams()
@@ -17,8 +17,7 @@ function Listing() {
         return null
     }
 
-    const { id, title, cover, pictures, description, host, rating, location, equipments, tags } = listingData
-
+    const { title, pictures, description, host, rating, location, equipments, tags } = listingData
 
     return (
         <main>
@@ -26,11 +25,10 @@ function Listing() {
                 <Slideshow data={pictures} />
             </section>
             <section className='section'>
-                <Host data={host} />
-                <ListingRating data={rating} />
+                <ListingMain title={title} host={host} rating={rating} location={location} tags={tags} />
             </section>
             <section className='section'>
-                
+                <ListingDetails description={description} equipments={equipments} />
             </section>
         </main>
     )
