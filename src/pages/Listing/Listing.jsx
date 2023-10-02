@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom'
 import jsonData from "../../data/logements.json"
 import Slideshow from '../../components/Slideshow'
 import Host from '../../components/Host/Host'
+import ListingRating from '../../components/ListingRating'
 
 function Listing() {
     const { listingId } = useParams()
@@ -26,6 +27,7 @@ function Listing() {
             </section>
             <section className='section'>
                 <Host data={host} />
+                <ListingRating data={rating} />
             </section>
             <section className='section'>
                 
