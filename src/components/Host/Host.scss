@@ -1,0 +1,24 @@
+@import "../../styles/variables";
+@import "../../styles/media-queries";
+
+.host {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.7rem;
+    &__name {
+        font-family: $font-family;
+        color: $primary-color;
+        font-size: 0.75rem;
+        font-weight: 500;
+        line-height: 142%;
+        text-align: right;
+        max-width: 4rem;
+        white-space: pre-line;
+    }
+    &__picture {
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+    }
+}
