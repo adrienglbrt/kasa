@@ -1,6 +1,6 @@
 import './Collapse.scss'
 import { useState } from 'react'
-import arrowIcon from '../../assets/arrow-icon.svg'
+import collapseArrowIcon from '../../assets/collapse-arrow-icon.svg'
 
 function Collapse({ data }) {
     const { title, content } = data
@@ -14,7 +14,7 @@ function Collapse({ data }) {
         <div className={`collapse ${isExpanded ? 'collapse--expanded' : ''}`}>
             <div className='collapse__default'  onClick={toggleCollapse}>
                 <h2 className='collapse__title'>{title}</h2>
-                <div className={`collapse__arrow ${isExpanded ? 'collapse__arrow--expanded' : ''}`} style={{ backgroundImage: `url(${arrowIcon})`}}></div>
+                <div className={`collapse__arrow ${isExpanded ? 'collapse__arrow--expanded' : ''}`} style={{ backgroundImage: `url(${collapseArrowIcon})`}}></div>
             </div>
             {isExpanded && <div className='collapse__content'><p>{content}</p></div>}
         </div>

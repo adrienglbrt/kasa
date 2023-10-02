@@ -1,0 +1,54 @@
+@import "../../styles/variables";
+@import "../../styles/media-queries";
+
+.slideshow {
+    height: 16rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+	align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+    @include breakpoint-tablet {
+        height: 26rem;
+        border-radius: 25px;
+    }
+    &__arrow {
+        width: 3rem;
+        height: 3rem;
+        position: absolute;
+        background-color:rgba(0, 0, 0, 0);
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none; 
+        transform: scale(1);
+        cursor: pointer;
+        @include breakpoint-tablet {
+            transform: scale(1.5);
+        }
+        &--prev {
+            background-image: url(../../assets/slideshow-arrow-prev.svg);
+            left: 0;
+        }
+        &--next {
+            background-image: url(../../assets/slideshow-arrow-next.svg); 
+            right: 0;
+        }
+    }
+    &__current-img {
+        max-width: 100%;
+    }
+    &__index {
+        position: absolute;
+        font-family: $font-family;
+        font-weight: 500;
+        font-size: 1.2rem;
+        color: $light-color;
+        display: none;
+        @include breakpoint-tablet {
+            display: block;
+            bottom: 1.5rem
+        }
+    }
+}
