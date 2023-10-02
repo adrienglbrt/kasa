@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./ListingThumb.scss";
 
 function ListingThumb({ data }) {
-    const { title, cover } = data
+    const { id, title, cover } = data
     const [isHovered, setIsHovered] = useState(false)
 
     return (

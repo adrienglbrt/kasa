@@ -42,8 +42,14 @@
     &__cover {
         position: absolute;
         width: 100%;
-        top: -150%;
+        top: -50%;
         left: 0;
         z-index: 0;
+        @include breakpoint-tablet {
+            top: -75%;
+        }
+        @include breakpoint-desktop {
+            top: -150%;
+        }
     }
 }

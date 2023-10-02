@@ -1,0 +1,69 @@
+@import "../../styles/variables";
+@import "../../styles/media-queries";
+
+.collapse {
+    border-radius: 10px;
+    background-color: $secondary-color;
+    transition: max-height 0.3s;
+    margin-bottom: 1rem;
+    &--expanded {
+        .collapse__content {
+            max-height: fit-content;
+            transition: max-height 0.3s;
+        }
+    }
+    &__default {
+        border-radius: 10px;
+        background-color: $primary-color;
+        padding: 0 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include breakpoint-tablet {
+            padding: 0 1rem;
+        }
+    }
+    &__title {
+        font-family: $font-family;
+        font-weight: 500;
+        font-size: 0.8rem;
+        color: $light-color;
+        @include breakpoint-tablet {
+            font-size: 1.2rem;
+        }
+    }
+    &__arrow {
+        width: 2rem;
+        height: 2rem;
+        transform: scale(0.7);
+        transition: transform 0.25s;
+        @include breakpoint-tablet {
+            transform: scale(1);
+        }
+        &--expanded {
+            transform: scale(0.7) rotate(180deg);
+            @include breakpoint-tablet {
+                transform: scale(1) rotate(180deg);
+            }
+        }
+    }
+    &__content {
+        background-color: $secondary-color;
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 0.75rem;
+        color: $primary-color;
+        border-radius: 10px;
+        padding: 1.25rem;
+        line-height: 142%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s;
+        @include breakpoint-tablet {
+            font-size: 1.2rem;
+        }
+        & p {
+            margin: 0
+        }
+    }
+}
