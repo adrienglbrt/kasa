@@ -31,6 +31,8 @@ function About() {
         <main>
             <section className="section">
                 <HeroBanner data={heroData} />
+            </section>
+            <section className="section">
                 {collapseData.map((item, index) => (
                     <Collapse key={index} data={item} />
                 ))}
