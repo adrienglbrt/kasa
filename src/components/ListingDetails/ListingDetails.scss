@@ -5,6 +5,7 @@
     @include breakpoint-desktop {
         display: flex;
         flex-direction: row;
+        align-items: flex-start;
         gap: 4rem
     }
     // &__collapse {
