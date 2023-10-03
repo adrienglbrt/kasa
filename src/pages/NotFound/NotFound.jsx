@@ -1,7 +1,9 @@
+import Error404 from '../../components/Error404'
+
 function NotFound() {
     return (
         <main>
-            <h1>404</h1>
+            <Error404 />
         </main>
     )
 }
