@@ -12,8 +12,8 @@
     margin-right: auto;
     &--expanded {
         .collapse__content {
-            max-height: fit-content;
-            transition: max-height 0.3s;
+            max-height: 1000px;
+            // transition: max-height 0.3s;
         }
     }
     &__default {
@@ -64,7 +64,7 @@
         border-radius: 10px;
         padding: 1.25rem;
         line-height: 142%;
-        max-height: 0;
+        max-height: 0px;
         overflow: hidden;
         transition: max-height 0.3s;
         @include breakpoint-tablet {

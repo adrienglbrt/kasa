@@ -7,6 +7,7 @@
     justify-content: space-between;
     padding: 1.2rem 1.2rem 2rem 1.2rem;
     margin: 0 auto;
+    width: 100%;
     max-width: 1240px;
     @include breakpoint-tablet {
         margin: 3rem auto;

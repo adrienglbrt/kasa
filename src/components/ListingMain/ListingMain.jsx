@@ -21,4 +21,5 @@ function ListingMain({ title, host, rating, location, tags }) {
     )
 }
 
+
 export default ListingMain

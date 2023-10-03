@@ -29,9 +29,9 @@ function Listing() {
         return <div>Loading...</div>
     }
 
-    if (!listingData) {
-        return <div>Listing not found</div>;
-    }
+    // if (!listingData) {
+    //     return <div>Listing not found</div>;
+    // }
 
     const { title, pictures, description, host, rating, location, equipments, tags } = listingData
 
