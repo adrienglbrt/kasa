@@ -2,8 +2,14 @@
 @import "../../styles/media-queries";
 
 .listing-rating {
+    display: flex;
+    @include breakpoint-tablet {
+        gap: 1rem;
+    }
     &__star {
-        &--filled {
+        @include breakpoint-tablet {
+            transform: scale(2);
+            margin-top: -2rem;
         }
     }
 }

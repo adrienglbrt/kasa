@@ -2,6 +2,7 @@
 @import "../../styles/media-queries";
 
 .collapse {
+    width: 100%;
     border-radius: 10px;
     background-color: $secondary-color;
     transition: max-height 0.3s;

@@ -18,7 +18,7 @@ function ListingDetails({ equipments, description }) {
     }
 
     return (
-        <div className="listing-details">
+        <div className='listing-details'>
             <Collapse data={descriptionData} />
             <Collapse data={equipmentsData} />
         </div>

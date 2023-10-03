@@ -15,10 +15,17 @@
         text-align: right;
         max-width: 4rem;
         white-space: pre-line;
+        @include breakpoint-tablet {
+            font-size: 1.2rem;
+            max-width: 8rem;
+        }
     }
     &__picture {
         border-radius: 50%;
         width: 2rem;
         height: 2rem;
+        @include breakpoint-tablet {
+            width: 4rem;
+            height: 4rem;        }
     }
 }
